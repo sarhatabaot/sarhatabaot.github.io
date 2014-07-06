@@ -21,12 +21,42 @@
 			});
 		});
 	</script>
-	
+	<script>
+	   $(document).ready(function() {
+         $('.masterTooltip').hover(function(){
+             var title = $(this).attr('title');
+             $(this).data('tipText', title).removeAttr('title');
+                $('<p class="tooltip"></p>')
+                .text(title)
+                .appendTo('body')
+                .fadeIn('fast');
+        }, function() {
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+        }).mousemove(function(e) {
+        var mousex = e.pageX + 20; 
+        var mousey = e.pageY + 10; 
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+     });
+     });
+	</script>
 	<style>
+	     .tooltip {
+	        display:none;
+	        position:absolute;
+	        border:1px solid #333;
+	        background-color:#161616;
+	        border-radius:5px;
+	        padding:10px;
+	        color:#fff;
+	        font-size:12px Arial;
+        }
 		.meter { 
 			height: 20px;  /* Can be anything */
 			position: relative;
-			margin: 60px 0 20px 0; /* Just for demo spacing */
+			margin-top: 15px;
+			margin-bottom: 10px;
 			background: #555;
 			-moz-border-radius: 25px;
 			-webkit-border-radius: 25px;
@@ -155,15 +185,41 @@
 <body>
 
 	<div id="page-wrap">
-		
+
 	  <h1>LoC Update</h1>
-	  
+
+	  <h2>Overall Progress</h2>
 		<div class="meter animate">
-			<span style="width: 25%"></span>
-		</div>
+			<span style="width: 1%" class="masterTooltip" title="1%"></span>
+	  </div>
+
+	  <h2>Creative</h2>
+	     <div class="meter orange">
+	     	<span style="width: 1%" class="masterTooltip" title="1%"></span>
+	     </div>
+
+	  <h2>Survival</h2>
+	     <div class="meter red">
+	     	<span style="width:1%" class="masterTooltip" title="1%"></span>
+	     </div>
+
+	  <h2>Games</h2>
+	     <div class="meter red">
+	     	<span style="width:1%" class="masterTooltip" title="1%"></span>
+	     </div>
+
+	  <h2>Prison</h2>
+	     <div class="meter red">
+	     	<span style="width:1%" class="masterTooltip" title="1%"></span>
+	     </div>
 		
 	</div>
-	
+	<div class="twitter">
+	    </br></br>
+	     <a class="twitter-timeline" href="https://twitter.com/sarhatabaot1" data-widget-id="485840337449910272">Tweets by @sarhatabaot1</a>
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	<footer class="site-footer"></footer>
 </body>
 
 </html>
