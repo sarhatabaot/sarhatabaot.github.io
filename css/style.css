@@ -45,6 +45,8 @@ ul li a {
 /* BASIC TYPOGRAPHY */
 #main {
    padding-top: 60px;
+   font-size: 20px;
+   margin-left: 25%;
 }
 
 /* GALLERY */
