@@ -62,3 +62,6 @@ ul li a {
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
 }
+#gallery_itemname{
+	color: #7F7F7F;
+}
