@@ -1,6 +1,7 @@
 body {
 	margin: 0;
-	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 }
 /* MAIN */
 
@@ -81,4 +82,25 @@ ul li a {
 .contact, .copyright{
 	margin-left: 25%;
 }
-#
+/* FOOTER */
+html, body {
+  height: 100%;
+}
+#main {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -80px; 
+}
+
+#main:after {
+  content: "";
+  display: block;
+}
+#footer, #main:after {
+  /* .push must be the same height as footer */
+  height: 80px; 
+}
+#footer {
+	width:100%;
+	background-color:#727272;
+}
