@@ -21,21 +21,21 @@ div.element {
     margin-right: 0; }
 
 @media screen and (max-width: 480px) {
-  .my-class {
+  .element {
     float: left;
     display: block;
     margin-right: 6.66667%;
     width: 46.66667%; }
-    .my-class:last-child {
+    .element:last-child {
       margin-right: 0; } }
 
 @media screen and (max-width: 768px) {
-  .my-class {
+  .element {
     float: left;
     display: block;
     margin-right: 3.22581%;
     width: 48.3871%; }
-    .my-class:last-child {
+    .element:last-child {
       margin-right: 0; } }
 
 body {
