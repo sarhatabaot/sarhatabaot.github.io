@@ -1,5 +1,4 @@
 sarhatabaot.github.io
 =====================
 
-Just my personal site.
-Including experiments and Lore Of Crafters related things.
+This is my personal website. Nothing to see, hidden corner of myself. I like music.
