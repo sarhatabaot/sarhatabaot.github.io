@@ -6,12 +6,9 @@ class Resource {
 }
 
 const endpoint = "https://api.spiget.org/v2/authors/43276/resources";
-const test_response = './test-response.json';
+// const test_response = './test-response.json';
 
-var resources = getResourcesFromJson(fetchJson(test_response));
-var totalDownloads = getTotalDownloads(resources);
-
-applyDownloadsToDom();
+window.onload = fetchJson(endpoint);
 
 function applyDownloadsToDom(downloads) {
     document.getElementById('downloads').innerHTML = new Intl.NumberFormat().format(downloads);
@@ -26,20 +23,35 @@ function fetchJson(path) {
             }
         })
         .then((response) => {
-            let promiseArray = JSON.parse(response.json());
-            let resources = getResourcesFromJson(promiseArray);
-            let totalDownloads = getTotalDownloads(resources);
+            if (!response.ok) {
+                throw new Error(`HTTP error, status = ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(content => {
+            var data = content.data;
+            var resources = [];
+            for (const plugin of data) {
+                resources.push(new Resource(plugin.id, plugin.downloads))
+            }
+            // for (var i = 0; i < 5; i++) {
+            //     resources.push(new Resource(data[i].id, data[i].downloads))
+            // }
+
+            var totalDownloads = getTotalDownloads(resources);
             applyDownloadsToDom(totalDownloads);
         })
         .catch((err) => console.error(err));
 }
 
 //This function accepts parsedJson and return an array of resources.
-function getResourcesFromJson(promiseArray) {
+async function getResourcesFromJson(promiseArray) {
     let resources = [];
     for (let i = 0; i < 5; i++) {
-        var downloads = promiseArray[0].downloads;
-        var id = promiseArray[i].id;
+        console.info(promiseArray[i]);
+        var finalResult = promiseArray[i];
+        var downloads = finalResult["downloads"];
+        var id = finalResult.id;
         resources.push(new Resource(id, downloads));
     }
 
