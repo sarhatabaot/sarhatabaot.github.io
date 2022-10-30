@@ -1,32 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>sarhatabaot</title>
-    <style>
-        body{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .main {
-            width: 30%;
-            margin: 0 auto;
-        }
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
 
-    </style>
+    <title>Omer Oreg</title>
 </head>
+
 <body>
-    <section class="main">
-        <h2>Hello! I'm sarhatabaot.</h2>
-        <p class="main-description">This is a hub for most of the projects I work on, check them out below:</p>
-        <div class="main-projects">
-            <ul>
-                <li><a href="https://github.com/sarhatabaot">Github</a></li>
-                <li><a href="https://treasureisland.enjin.com/">TreasureIsland Minecraft Server</a></li>
-                <li><a href="https://www.spigotmc.org/members/sarhatabaot.43276/#resources">Spigot Plugins</a></li>
-            </ul>
+    <header class="main-header">
+        <div class="main-header__brand">
+            <a href="index.html">
+                Omer Oreg
+            </a>
         </div>
-    </section>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="index.html#about-me">
+                        about me
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html#projects">
+                        projects
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="index.html#contact">
+                        contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-me" id="about-me">
+            <img class="about-me__profile" src="./images/profile-nobg.png">
+            <section class="about-me__text">
+                <h2>Hello, I'm Omer Oreg</h2>
+                <h3>I'm a developer, Minecraft server owner & book collector.</h3>
+                <h4>I specialize in creating plugins for Minecraft servers.</h4>
+                <h3>4+ Years of Experience, Since 2018</h3>
+            </section>
+        </section>
+
+        <section class="projects-overview" id="projects">
+            <h1 class="overview__title">Plugins</h1>
+            <!-- load in using js
+            3. Grab from select github repos <- This and below. We will add a special file to contain descriptions and links. To each repo.
+            4. Add manually: TreasureIsland, Lapzupi
+            5. Redbubble Store
+            -->
+            <article class="projects-overview__item">
+                <h3>TradingCards</h3>
+                <img class="projects-overview__item_img" src="./images/projects/tradingcards-logo.png">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/TradingCards" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://www.spigotmc.org/resources/trading-cards-1-18-1-19-2.105709/" class="projects-overview__item-spigot">
+                        Spigot
+                    </a>
+                </div>
+            </article>
+            <article class="projects-overview__item">
+                <h3>FarmAssistReboot</h3>
+                <img class="projects-overview__item_img" src="./images/projects/farmassistreboot-logo.png">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/FarmAssistReboot" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://www.spigotmc.org/resources/farmassistreboot-1-13-1-19-2.64064/" class="projects-overview__item-spigot">
+                        Spigot
+                    </a>
+                </div>
+            </article>
+            <article class="projects-overview__item">
+                <h3>EnchantGUI</h3>
+                <img class="projects-overview__item_img" src="./images/projects/enchantgui-logo.png">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/EnchantGUI" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://www.spigotmc.org/resources/enchantgui-1-17-1-1-19-2.63972/" class="projects-overview__item-spigot">
+                        Spigot
+                    </a>
+                </div>
+            </article>
+            <article class="projects-overview__item">
+                <h3>ChunkSpawnerLimiter</h3>
+                <img class="projects-overview__item_img" src="./images/projects/chunkspawnerlimiter-logo.jpg">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/ChunkSpawnerLimiter" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://www.spigotmc.org/resources/chunk-spawner-limiter-1-13-1-19-2.66281/" class="projects-overview__item-spigot">
+                        Spigot
+                    </a>
+                </div>
+            </article>
+            <article class="projects-overview__item">
+                <h3>BetterBanner</h3>
+                <img class="projects-overview__item_img" src="./images/projects/betterbanner-logo.png">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/BetterBanner" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://www.spigotmc.org/resources/betterbanner-1-13-1-13-2.63993/" class="projects-overview__item-spigot">
+                        Spigot
+                    </a>
+                </div>
+            </article>
+            <article class="projects-overview__item">
+                <h3>Composer</h3>
+                <img class="projects-overview__item_img" src="./images/projects/composer-logo.png">
+                <div class="projects-overview__item-links">
+                    <a href="https://github.com/sarhatabaot/Composer" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="" class="projects-overview__item-ore">
+                        Sponge
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section class="projects-stats">
+            <div class="projects-stats__item">
+                <span id="downloads">10000</span> Downloads
+                <!-- Can obtain this automatically via spiget api-->
+            </div>
+            <div class="projects-stats__item">
+                <span id="players">1000</span> Players
+                <!-- Can obtain this automatically via https://bstats.org/help/rest-api -->
+            </div>
+            <div class="projects-stats__item">
+                <!-- Can obtain this automatically via https://bstats.org/help/rest-api -->
+                <span id="servers">40</span> Servers
+            </div>
+        </section>
+
+        <section class="servers-overview">
+            <h1 class="overview__title">Servers</h1>
+
+            <article class="servers-overview__item">
+                <img class="servers-overview__item_img" src="./images/projects/loreofcrafters-full.png">
+                <h2>LoreOfCrafters</h2>
+                <h3>Admin</h3>
+                <h4>2011-2014</h4>
+                <div class="servers-overview__item-links">
+                    <a href="https://loreofcraftersx.enjin.com/" class="servers-overview__item-website">
+                        Forums
+                    </a>
+            </article>
+
+            <article class="servers-overview__item">
+                <img class="servers-overview__item_img" src="./images/projects/ti-fat-logo.png">
+                <h2>TreasureIsland Network</h2>
+                <h3>Admin & Developer</h3>
+                <h4>2014-2022</h4>
+                <div class="servers-overview__item-links">
+                    <a href="https://github.com/TreasureIslandMC" class="projects-overview__item-github">
+                        Github
+                    </a>
+                    <a href="https://treasureisland.enjin.com/" class="projects-overview__item-website">
+                        Forums
+                    </a>
+                </div>
+            </article>
+
+            <article class="servers-overview__item">
+                <img class="servers-overview__item_img" src="./images/projects/lapzupi-full-logo.png">
+                <div class="servers-overview__item-description">
+                    <h2>Lapzupi</h2>
+                    <h3>Owner & Developer</h3>
+                    <h4>Established Nov. 2021</h4>
+                </div>
+                <div class="servers-overview__item-links">
+                    <a href="https://github.com/Lapzupi" class="projects-overview__item-github">
+                        Github
+                    </a>
+                </div>
+            </article>
+        </section>
+        <section class="contact " id="contact">
+            <!-- Contact form email? linkedin, github  -->
+            <h1 class="overview__title">Contact Me</h1>
+            <div class="social-links">
+                <a class="social-links__item github" href="https://github.com/sarhatabaot ">
+                    <img class="social-links__item_img" src="./images/social/github-logo.svg ">
+                </a>
+                <a class="social-links__item linkedin" href="https://www.linkedin.com/in/omer-oreg/ ">
+                    <img class="social-links__item_img" src="./images/social/linkedin-logo.svg ">
+                </a>
+                <a class="social-links__item email" href="mailto:omeroreg@gmail.com ">
+                    <img class="social-links__item_img" src="./images/social/mail.svg ">
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        Copyright © 2022 Omer Oreg
+    </footer>
+    <script src="index.js "></script>
 </body>
+
 </html>

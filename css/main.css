@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+Pro:wght@400;900&display=swap');
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-header {
+    width: 100%;
+    margin-top: 3%;
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main-header a,
+.main-header a:visited {
+    color: #0065e9;
+}
+
+.main-header,
+.main-header .main-nav__items,
+.main-header .main-nav__items .main-nav__item {
+    display: inline-block;
+}
+
+.main-header .main-header__brand,
+.main-nav {
+    display: inline-block;
+}
+
+.main-header .main-nav__items {
+    display: inherit;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .main-nav__items .main-nav__item {
+    text-transform: uppercase;
+    padding-right: 30px;
+}
+
+.main-nav {
+    width: calc(100% - 100px);
+    text-align: right;
+}
+
+.projects-stats,
+.projects-stats .projects-stats__item {
+    display: inline-block;
+    text-align: center;
+}
+
+.about-me {
+    text-align: center;
+}
+
+.about-me__text {
+    vertical-align: top;
+}
+
+.projects-stats,
+.about-me {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.projects-stats .projects-stats__item {
+    margin-right: 20px;
+}
+
+.projects-stats {
+    background-color: rgb(159, 212, 255, 0.4);
+    font-size: 26px;
+    padding: 20px 0px;
+}
+
+.about-me .about-me__profile {
+    /* border-radius: 45%; */
+    height: 200px;
+}
+
+.about-me,
+.about-me .about-me__profile,
+.about-me .about-me__text {
+    display: inline-block;
+}
+
+.projects-overview__item {
+    display: inline-block;
+    padding: 0 0.3em 0 0.3em;
+    margin: 0 0.3em 0 0.3em;
+    text-align: center;
+}
+
+.projects-overview__item_img,
+.projects-overview__item-description,
+.projects-overview__item-links {
+    display: inline-block;
+    height: 64px;
+    text-align: center;
+}
+
+.projects-overview__item-links>a {
+    display: block;
+    padding: 0px 15px;
+}
+
+.servers-overview__item-github::before,
+.projects-overview__item-github::before {
+    content: '';
+    background-image: url(../images/social/github-logo.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 15px;
+}
+
+.projects-overview__item-spigot::before {
+    content: '';
+    background-image: url(../images/social/spigot-logo.ico);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 15px;
+}
+
+.projects-overview__item-ore::before {
+    content: '';
+    background-image: url(../images/social/sponge-ore-logo.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 15px;
+}
+
+.projects-overview__item-bstats::before {
+    content: '';
+    background-image: url(../images/social/bstats-logo.jpg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 15px;
+}
+
+.servers-overview__item-website::before,
+.projects-overview__item-website::before {
+    content: '';
+    background-image: url(../images/social/internet.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 0px 15px;
+}
+
+.servers-overview__item_img {
+    height: 56px;
+}
+
+.projects-overview,
+.servers-overview {
+    display: inline-block;
+    width: 100%;
+}
+
+.projects-overview {
+    background-color: rgb(185, 216, 255, 0.2);
+    text-align: center;
+}
+
+.overview__title {
+    font-size: 2.2rem;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.servers-overview__item {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+
+/** Contact **/
+
+.contact {
+    text-align: center;
+}
+
+.social-links__item>img {
+    height: 96px;
+    padding: calc(96px / 2);
+}
+
+
+/** Footer **/
+
+footer {
+    padding: 20px;
+    color: #0065e9;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+}

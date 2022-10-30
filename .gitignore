@@ -1,4 +1,2 @@
-*.scss
-*.scssc
-*.map
-ideas.html
+.vscode
+test-response.json
